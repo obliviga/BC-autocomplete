@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>test</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+</head>
+
+<body>
+  <input type="text" maxlength="255" size="10" value="" class="textfield ui-autocomplete-input" name="product.field3" id="product.field3" autocomplete="off">
+
+  <script type="text/javascript">
+  $( document ).ready(function() {
+      $(function() {
+        // More code using $ as alias to jQuery
+
+        var availableTags = [
+          "ActionScript",
+          "AppleScript",
+          "Asp",
+          "BASIC",
+          "C",
+          "C++",
+          "Clojure",
+          "COBOL",
+          "ColdFusion",
+          "Erlang",
+          "Fortran",
+          "Groovy",
+          "Haskell",
+          "Java",
+          "JavaScript",
+          "Lisp",
+          "Perl",
+          "PHP",
+          "Python",
+          "Ruby",
+          "Scala",
+          "Scheme"
+        ];
+        $("#product\\.field3").autocomplete({
+          source: "mills.txt",
+          change: function(event, ui) {
+            if (!ui.item) {
+              $("#product\\.field3").val("");
+            }
+          }
+        });
+
+      });
+      });
+  </script>
+</body>
+
+</html>
